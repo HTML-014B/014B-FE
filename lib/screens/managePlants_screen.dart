@@ -149,9 +149,7 @@ class _ManagePlantsScreenState extends State<ManagePlantsScreen> {
                     duration: Duration(seconds: 1),
                     curve: Curves.fastEaseInToSlowEaseOut,
                     height: 80,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.5),
-                    ),
+                    decoration: BoxDecoration(color: Color(0xffE6F7B4)),
                     child: Center(
                         child: Column(
                       children: [

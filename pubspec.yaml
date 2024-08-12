@@ -110,6 +110,11 @@ flutter:
     - assets/clover.png
     - assets/checked.png
     - assets/loadingCharacter.png
+    - assets/loading.gif
+    - assets/appbar_logo.png
+    - assets/FARMIN.png
+    - assets/final_logo.png
+    - assets/final_loading.gif
 
   # To add assets to your application, add an assets section, like this:
   # assets:

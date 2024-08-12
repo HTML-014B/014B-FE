@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:html_front/components/custom_appbar.dart';
+import 'package:html_front/components/solution.dart';
 import 'package:http/http.dart' as http;
 
 class SolutionModel {
@@ -110,19 +111,16 @@ class _AiScreenState extends State<AiScreen> {
                 : isLoading == true && isCompleted == false
                     ? Center(
                         child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(
-                            'assets/loadingCharacter.png',
-                            width: 100,
-                            height: 100,
-                          ),
-                          SizedBox(height: 30),
-                          CircularProgressIndicator(),
-                          SizedBox(height: 30),
-                          Text('적합한 작물과 소개서를 작성중이에요')
+                          Image.asset('assets/final_loading.gif',
+                              width: 1000, height: 500),
+                          Text('적합한 작물과 소개서를 작성중이에요...',
+                              style: TextStyle(
+                                fontSize: 18.0, // 글꼴 크기를 24.0으로 설정
+                                color: Colors.black, // 텍스트 색상 설정 (선택 사항)
+                              ))
                         ],
                       ))
-                    : Text(''))); //Solution(solution: solution)));
+                    : Solution(solution: '음음')));
   }
 }
