@@ -83,7 +83,6 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (context) => DetailScreen(farm: farmsList[0]),
         fullscreenDialog: true,
       ),
-
     );
   }
 

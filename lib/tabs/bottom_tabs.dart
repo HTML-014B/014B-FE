@@ -5,6 +5,7 @@ import 'package:html_front/screens/home_screen.dart';
 import 'package:html_front/screens/managePlants_screen.dart';
 import 'package:html_front/screens/myPage_screen.dart';
 import 'package:html_front/screens/store_screen.dart';
+import 'package:html_front/screens/test_screen.dart';
 
 // bottom tabs 정리한 클래스
 class TabNavigationItem {

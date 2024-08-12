@@ -1,14 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:label="html_front"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDHtcaRaTtUo8Jif1sm_5zb-nsM1B8iHZg"/>
+            android:value="AIzaSyA5MbB03iS4cpTVcExeBx3IZ47VHxuxEQg"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -48,3 +52,5 @@
         </intent>
     </queries>
 </manifest>
+
+
