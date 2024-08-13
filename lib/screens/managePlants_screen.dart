@@ -75,41 +75,90 @@ class _ManagePlantsScreenState extends State<ManagePlantsScreen> {
       body: Column(
         children: [
           SizedBox(height: 10),
-          Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround, // 간격을 띄우고 정렬
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+          isEditedMode == false
+              ? Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Row(
+                    mainAxisAlignment:
+                        MainAxisAlignment.spaceAround, // 간격을 띄우고 정렬
                     children: [
-                      Text(
-                        '혜미 농장',
-                        style: TextStyle(
-                          fontSize: 24.0, // 글꼴 크기를 24.0으로 설정
-                          color: Color(0xff6B614D), // 텍스트 색상 설정 (선택 사항)
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      Text('경기도 용인시 서천동 267-2'),
-                      SizedBox(height: 5),
-                      Row(
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.asset('assets/warning.png',
-                              width: 15, height: 15),
                           Text(
-                            '총 6구역 남았어요!!',
+                            '혜미 농장',
                             style: TextStyle(
-                                fontSize: 14, color: Color(0xffFA0303)),
+                              fontSize: 24.0, // 글꼴 크기를 24.0으로 설정
+                              color: Color(0xff6B614D), // 텍스트 색상 설정 (선택 사항)
+                            ),
+                          ),
+                          SizedBox(height: 5),
+                          Text('경기도 용인시 서천동 267-2'),
+                          SizedBox(height: 5),
+                          Row(
+                            children: [
+                              Image.asset('assets/warning.png',
+                                  width: 15, height: 15),
+                              Text(
+                                '총 6구역 남았어요!!',
+                                style: TextStyle(
+                                    fontSize: 14, color: Color(0xffFA0303)),
+                              ),
+                            ],
                           ),
                         ],
                       ),
+                      SizedBox(width: 10),
+                      Image.asset('assets/final_logo.png',
+                          width: 120, height: 100),
+                    ],
+                  ))
+              : Padding(
+                  padding: const EdgeInsets.all(30),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextButton(
+                              onPressed: () => setState(() {
+                                    isEditedMode = false;
+                                  }),
+                              child: Text('<',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w200,
+                                    fontSize: 30.0, // 글꼴 크기를 24.0으로 설정
+                                    color:
+                                        Color(0xff6B614D), // 텍스트 색상 설정 (선택 사항)
+                                  ))),
+                          Row(
+                            children: [
+                              ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                      backgroundColor: Color(0xffD9D9D9)),
+                                  onPressed: () => {},
+                                  child: Text('구획별 가격',
+                                      style: TextStyle(
+                                        fontSize: 14.0, // 글꼴 크기를 24.0으로 설정
+                                        color: Color(
+                                            0xff000000), // 텍스트 색상 설정 (선택 사항)
+                                      ))),
+                              SizedBox(width: 10),
+                              Image.asset('assets/reset.png',
+                                  width: 25, height: 25),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(
+                            vertical: 2.0), // 수평선 위아래 여백 설정
+                        height: 1.0, // 수평선 높이
+                        color: Color(0xffD9D9D9), // 수평선 색상
+                      ),
                     ],
                   ),
-                  SizedBox(width: 10),
-                  Image.asset('assets/final_logo.png', width: 120, height: 100),
-                ],
-              )),
+                ),
           SizedBox(height: 10),
           Expanded(
             // Expanded를 Column의 두 번째 자식으로 이동
@@ -168,64 +217,44 @@ class _ManagePlantsScreenState extends State<ManagePlantsScreen> {
                     child: AnimatedContainer(
                       duration: Duration(seconds: 1),
                       curve: Curves.fastEaseInToSlowEaseOut,
-                      height: 80,
                       decoration: BoxDecoration(color: Color(0xffE6F7B4)),
                       child: Center(
                         child: Column(
                           children: [
-                            SizedBox(height: 5),
-                            Text(
-                              '선택 면적 $section평',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 15),
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (_) {
-                                    return AlertDialog(
-                                      title: Text('확정하기'),
-                                      content: Text(
-                                        '결제하실 금액은 ${total_price * 100000}원 입니다',
-                                      ),
-                                      actions: [
-                                        TextButton(
-                                          onPressed: () {
-                                            Navigator.of(context).pop(false);
-                                          },
-                                          child: Text('취소'),
+                            SizedBox(height: 20),
+                            Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Image.asset('assets/selectedGrass.png',
+                                      width: 50, height: 50),
+                                  SizedBox(width: 10),
+                                  Text('총 면적 ${7 * section}')
+                                ]),
+                            Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    '총 $section 구역',
+                                    style: TextStyle(
+                                      fontSize: 18.0, // 폰트 크기를 24로 설정
+                                    ),
+                                  ),
+                                  TextButton(
+                                      onPressed: () => {},
+                                      child: Text(
+                                        "구역 대여하기",
+                                        style: TextStyle(
+                                          fontSize: 18.0, // 폰트 크기를 24로 설정
                                         ),
-                                        TextButton(
-                                          onPressed: () {
-                                            clickPayment();
-                                            setState(() {
-                                              isClicked = false;
-                                              section = 0;
-                                              total_price = 0;
-                                              myPlant(_plantList);
-                                              Navigator.of(context).pop(false);
-                                            });
-                                          },
-                                          child: Text('결제하기'),
-                                        ),
-                                      ],
-                                    );
-                                  },
-                                );
-                              },
-                              child: Container(
-                                child: isClicked == false
-                                    ? Text('${total_price * 100000}원 확정하기')
-                                    : Text(''),
-                              ),
-                            ),
+                                      ))
+                                ]),
                           ],
                         ),
                       ),
                     ),
-                  )
-                else
+                  ),
+                if (isEditedMode == false && total_price == 0)
                   Positioned(
                     bottom: 20,
                     left: 0,

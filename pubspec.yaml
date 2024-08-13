@@ -89,9 +89,6 @@ flutter:
     - assets/myGround.png
     - assets/guard.png
     - assets/watering.png
-    - assets/ground_clicked.png
-    - assets/ground_nothing.png
-    - assets/ground_prohibited.png
     - assets/my_ground_carrot.png
     - assets/my_ground_nothing.png
     - assets/background.png
@@ -119,6 +116,7 @@ flutter:
     - assets/prohibitedGrass_final.png
     - assets/normalGrass.png
     - assets/warning.png
+    - assets/reset.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
