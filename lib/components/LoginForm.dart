@@ -40,7 +40,7 @@ class LoginForm extends StatelessWidget {
             width: 350,
             child: TextFormField(
                 validator: (value) => value!.isEmpty ? "${text}를 입력해주세요" : null,
-                obscureText: text == "Password" ? true : false,
+                obscureText: text == "비밀번호" ? true : false,
                 decoration: InputDecoration(
                   //hintText: "$text 입력",
                   filled: true,

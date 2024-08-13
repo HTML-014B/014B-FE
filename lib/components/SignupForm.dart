@@ -34,7 +34,7 @@ class SignupForm extends StatelessWidget {
             width: 350,
             child: TextFormField(
                 validator: (value) => value!.isEmpty ? "${text}를 입력해주세요" : null,
-                obscureText: text == "Password" ? true : false,
+                obscureText: text == "비밀번호" ? true : false,
                 decoration: InputDecoration(
                   //hintText: "$text 입력",
                   filled: true,
@@ -83,7 +83,7 @@ class SignupForm extends StatelessWidget {
           if (_formKey.currentState!.validate()) {
             _formKey.currentState!.save();
 
-            Navigator.pushNamed(context, '/login'); // api 연결 후 지우기
+            Navigator.pushNamed(context, '/login');
 
             final response = await http.post(
               Uri.parse('http://10.0.2.2:3000/v1/auth/signup'),
