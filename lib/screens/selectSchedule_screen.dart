@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:html_front/components/custom_appbar.dart';
+import 'package:html_front/screens/payment_screen.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class Event {
@@ -129,7 +130,7 @@ class _SelectScheduleScreenState extends State<SelectScheduleScreen> {
                                   onPressed: () => Navigator.of(context).push(
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                SelectScheduleScreen()),
+                                                PaymentScreen()),
                                       ),
                                   child: Text(
                                     "결제하기",

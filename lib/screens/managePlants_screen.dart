@@ -68,6 +68,38 @@ class _ManagePlantsScreenState extends State<ManagePlantsScreen> {
     setState(() {});
   }
 
+  /**누를 수 없는 땅 누를 시 다이얼로그 */
+  void _showCustomDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          surfaceTintColor: Color(0xffFFFFF8),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Icon(Icons.info, size: 50),
+              SizedBox(height: 10),
+              Text('이미 선점된 구역입니다.\n다른 구역을 선택해주세요'),
+            ],
+          ),
+          actions: <Widget>[
+            Center(
+                child: TextButton(
+              child: Text('확인'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ))
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -184,7 +216,7 @@ class _ManagePlantsScreenState extends State<ManagePlantsScreen> {
                             return;
                           }
                           if (_plantList[index].status == 'prohibited') {
-                            return;
+                            return _showCustomDialog(context);
                           }
                           if (_plantList[index].status == 'normal') {
                             setState(() {
