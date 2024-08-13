@@ -2,9 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:html_front/models/auth_model.dart';
 import 'package:http/http.dart' as http;
-import 'package:provider/provider.dart';
 
-class LoginForm extends StatelessWidget {
+class SignupForm extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   String _serial_id = '';
   String _password = '';
@@ -20,11 +19,6 @@ class LoginForm extends StatelessWidget {
             CustomTextFormField("비밀번호"),
             SizedBox(height: 30),
             submitButton(context),
-            SizedBox(height: 20),
-            TextButton(
-              onPressed: () => {Navigator.pushNamed(context, '/signup')},
-              child: const Text('계정이 없으신가요? 가입하기'),
-            )
           ],
         ));
   }
@@ -79,7 +73,7 @@ class LoginForm extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(15),
           child: const Text(
-            "로그인",
+            "회원가입",
             style: TextStyle(
               fontSize: 16,
             ),
@@ -89,26 +83,19 @@ class LoginForm extends StatelessWidget {
           if (_formKey.currentState!.validate()) {
             _formKey.currentState!.save();
 
-            Navigator.pushNamed(context, '/home'); // api 연결 후 지우기
+            Navigator.pushNamed(context, '/login'); // api 연결 후 지우기
 
             final response = await http.post(
-              Uri.parse('http://10.0.2.2:3000/v1/auth/login'),
+              Uri.parse('http://10.0.2.2:3000/v1/auth/signup'),
               body: {"serial_id": _serial_id, "password": _password},
             );
             if (response.statusCode == 200) {
-              Map<String, dynamic> decodedJson = json.decode(response.body);
-
-              // `data` 속성만 추출하여 모델에 매핑
-              Map<String, dynamic> data = decodedJson['data'];
-              final token = AuthModel.fromJson(data);
-              print(token);
-
               // 전역 상태 관리 set
               //_userProvider.name = user.name;
               //_userProvider.email = user.email;
               //_userProvider.route = user.route;
               //_userProvider.user_id = user.user_id;
-              Navigator.pushReplacementNamed(context, '/home');
+              Navigator.pushReplacementNamed(context, '/login');
               // Navigator.pushReplacementNamed(context, '/home', arguments: {
               //   "user_id": user.user_id
               // }); // 홈 화면 갈 때 email, image route 보내야함

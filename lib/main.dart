@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:html_front/pages/login_page.dart';
+import 'package:html_front/pages/signup_page.dart';
 import 'package:html_front/pages/splash_page.dart';
 import 'package:html_front/tabs/tabs.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
                 brightness: Brightness.light)), //다크/라이트 모드 선택),
         initialRoute: "/splash",
         routes: {
+          "/signup": (context) => SignupPage(),
           "/login": (context) => LoginPage(),
           "/home": (context) => Tabs(selectedIndex: 0),
           "/splash": (context) => SplashPage()

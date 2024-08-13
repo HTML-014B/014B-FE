@@ -51,11 +51,11 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 70.0),
               Center(
                   child: Image.asset(
-                'assets/final_logo.png',
+                'assets/splash_FARMIN.png',
                 width: 180,
                 height: 180,
               )),
-              SizedBox(height: 20.0),
+              SizedBox(height: 10.0),
               LoginForm()
             ])));
   }
