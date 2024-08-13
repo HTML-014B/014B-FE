@@ -15,8 +15,8 @@ class PaymentScreen extends StatelessWidget {
             SizedBox(height: 240),
             IconButton(
                 onPressed: () => {
-                      Navigator.of(context).pushAndRemoveUntil(
-                        MaterialPageRoute(builder: (context) => HomeScreen()),
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                        '/home',
                         (Route<dynamic> route) =>
                             route.settings.name == '/home',
                       )
