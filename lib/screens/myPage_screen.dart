@@ -6,7 +6,6 @@ import 'package:html_front/screens/managePlants_screen.dart';
 import 'package:html_front/screens/myApplication_screen.dart';
 import 'package:html_front/screens/mySaleList_screen.dart';
 
-
 class MyPageScreen extends StatefulWidget {
   @override
   State<MyPageScreen> createState() => _MyPageScreenState();
@@ -102,19 +101,6 @@ class _MyPageScreenState extends State<MyPageScreen> {
           new Divider(
             color: Color(0xffD9D9D9),
           ),
-          new ListTile(
-            title: new Text('텃밭 관리'),
-            leading: Image.asset(
-              'assets/clover.png',
-              width: 30,
-              height: 30,
-            ),
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => ManagePlantsScreen()));
-            },
-          ),
-          new Divider(color: Color(0xffD9D9D9)),
           new ListTile(
             title: new Text('판매 내역'),
             leading: Image.asset(

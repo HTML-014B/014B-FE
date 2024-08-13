@@ -17,7 +17,7 @@ class _ManageMyCropsScreenState extends State<ManageMyCropsScreen> {
     super.initState();
   }
 
-  final String cropName = "방토";
+  final String cropName = "토마토맛토";
   final String cropKind = "방울토마토";
   final int sunCount = 3;
   final int waterCount = 6;
