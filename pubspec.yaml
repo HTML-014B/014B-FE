@@ -37,6 +37,7 @@ dependencies:
   provider: 6.1.2
   flutter_speed_dial: ^7.0.0
   flutter_native_splash: ^2.3.1
+  image_picker: ^1.1.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -132,6 +133,10 @@ flutter:
     - assets/align-justify.png
     - assets/pencil.png
     - assets/drop.png
+    - assets/herb.png
+    - assets/crop2.png
+    - assets/crop3.png
+    - assets/crop4.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
