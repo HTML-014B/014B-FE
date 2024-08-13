@@ -16,13 +16,10 @@ class SelectScheduleScreen extends StatefulWidget {
 
 class _SelectScheduleScreenState extends State<SelectScheduleScreen> {
   /** 달력 */
-  //late Map<DateTime, List<Event>> _events;
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
-  //late List<DateTime> _selectedDays;
   DateTime? _rangeStart;
   DateTime? _rangeEnd;
-  //DateTime? _selectedEndDate;
 
   @override
   void initState() {
