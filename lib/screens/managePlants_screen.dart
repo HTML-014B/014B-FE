@@ -6,6 +6,7 @@ import 'package:html_front/components/custom_appbar.dart';
 import 'package:html_front/models/plant_model.dart';
 import 'package:html_front/screens/ai_screen.dart';
 import 'package:html_front/screens/diary_screen.dart';
+import 'package:html_front/screens/selectSchedule_screen.dart';
 
 class ManagePlantsScreen extends StatefulWidget {
   @override
@@ -241,7 +242,12 @@ class _ManagePlantsScreenState extends State<ManagePlantsScreen> {
                                     ),
                                   ),
                                   TextButton(
-                                      onPressed: () => {},
+                                      onPressed: () =>
+                                          Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    SelectScheduleScreen()),
+                                          ),
                                       child: Text(
                                         "구역 대여하기",
                                         style: TextStyle(
