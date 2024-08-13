@@ -13,12 +13,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         automaticallyImplyLeading: false,
         title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Image.asset(
-            'assets/logo.png',
-            height: 30,
-            width: 30,
+            'assets/appbar_logo.png',
+            height: 40,
+            width: 40,
           ),
-          Text(title,
-              style: TextStyle(color: Theme.of(context).colorScheme.tertiary)),
+          SizedBox(width: 5),
+          Image.asset(
+            'assets/FARMIN.png',
+            height: 100,
+            width: 100,
+          ),
         ]));
   }
 

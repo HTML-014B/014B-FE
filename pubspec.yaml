@@ -115,6 +115,10 @@ flutter:
     - assets/FARMIN.png
     - assets/final_logo.png
     - assets/final_loading.gif
+    - assets/selectedGrass.png
+    - assets/prohibitedGrass_final.png
+    - assets/normalGrass.png
+    - assets/warning.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
