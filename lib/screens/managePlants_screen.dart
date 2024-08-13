@@ -261,7 +261,7 @@ class _ManagePlantsScreenState extends State<ManagePlantsScreen> {
                                   Image.asset('assets/selectedGrass.png',
                                       width: 50, height: 50),
                                   SizedBox(width: 10),
-                                  Text('총 면적 ${7 * section}')
+                                  Text('총 면적 ${7 * section} m²')
                                 ]),
                             Row(
                                 mainAxisAlignment:
