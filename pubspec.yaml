@@ -119,6 +119,8 @@ flutter:
     - assets/normalGrass.png
     - assets/warning.png
     - assets/reset.png
+    - assets/splash_FARMIN.png
+    - assets/splash_1.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

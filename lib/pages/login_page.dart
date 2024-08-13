@@ -9,8 +9,8 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   late String isLogin = '';
-  //bool is_logined= false;
 
+  //bool isStarted = false;
   // void checkIsLogined() async {
   //   final response =
   //       await http.get(Uri.parse('http://10.0.2.2:3000/auth/authCheck?email=${}'));
@@ -35,6 +35,7 @@ class _LoginPageState extends State<LoginPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    //isStarted = false;
     //checkIsLogined();
     // if (isLogin == 'true') {
     //   Navigator.pushReplacementNamed(context, '/home');
