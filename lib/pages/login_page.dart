@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
         body: Padding(
             padding: const EdgeInsets.all(16.0),
             child: ListView(children: [
-              SizedBox(height: 80.0),
+              SizedBox(height: 70.0),
               Center(
                   child: Image.asset(
                 'assets/final_logo.png',
