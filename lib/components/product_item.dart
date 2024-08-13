@@ -9,7 +9,6 @@ class ProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 135.0,
       padding: const EdgeInsets.all(16.0),
       child: Row(
         children: [

@@ -15,23 +15,23 @@ class ProductModel {
 
 List<ProductModel> productList = [
   ProductModel.fromJson({
-    'title': '갓 수확한 당근 한 박스',
+    'title': '영주대장간 명품호미 수제 농기구 원예도구',
     'author': '혜미농장',
-    'image': 'assets/carrot.png',
-    'price': '10,000',
+    'image': 'assets/sale1.png',
+    'price': '9,900',
     'star': '4.5'
   }),
   ProductModel.fromJson({
-    'title': '갓 수확한 토마토 한 봉지',
+    'title': '미소산업 텃밭수확삽 로타리삽 농사 주말농장 밭같이',
     'author': '다현농장',
-    'image': 'assets/tomato.png',
-    'price': '5,000',
+    'image': 'assets/sale2.png',
+    'price': '45,000',
     'star': '4.7'
   }),
   ProductModel.fromJson({
-    'title': '갓 수확한 감자 1kg 한 박스',
+    'title': '쪽파 종자 1kg / 쪽파씨앗 종구 국산',
     'author': '준혁농장',
-    'image': 'assets/potato.png',
+    'image': 'assets/sale3.png',
     'price': '10,000',
     'star': '4.2'
   }),

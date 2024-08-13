@@ -125,6 +125,11 @@ flutter:
     - assets/splash_FARMIN.png
     - assets/splash_1.png
     - assets/calender.png
+    - assets/sale1.png
+    - assets/sale2.png
+    - assets/sale3.png
+    - assets/sale4.png
+    - assets/align-justify.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
