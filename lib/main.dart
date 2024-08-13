@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:html_front/pages/login_page.dart';
 import 'package:html_front/tabs/tabs.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,10 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(
                 seedColor: Color(0xD2B48C),
                 brightness: Brightness.light)), //다크/라이트 모드 선택),
-        initialRoute: "/home",
-        routes: {"/home": (context) => Tabs(selectedIndex: 0)});
+        initialRoute: "/login",
+        routes: {
+          "/login": (context) => LoginPage(),
+          "/home": (context) => Tabs(selectedIndex: 0)
+        });
   }
 }
