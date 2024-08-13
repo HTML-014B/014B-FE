@@ -21,6 +21,7 @@ class _SelectScheduleScreenState extends State<SelectScheduleScreen> {
   DateTime? _selectedDay;
   DateTime? _rangeStart;
   DateTime? _rangeEnd;
+  int day = 0;
 
   @override
   void initState() {
@@ -43,10 +44,14 @@ class _SelectScheduleScreenState extends State<SelectScheduleScreen> {
       _focusedDay = focusedDay;
       _rangeStart = start;
       _rangeEnd = end;
+      Duration? difference = _rangeEnd?.difference(_rangeStart!);
+
+      // 날짜 차이를 일(day) 단위로 출력
+      day = difference!.inDays;
     });
   }
 
-  final price = 9;
+  final int onedayPrice = 2400;
 
   @override
   Widget build(BuildContext context) {
@@ -115,7 +120,7 @@ class _SelectScheduleScreenState extends State<SelectScheduleScreen> {
                               Column(
                                 children: [
                                   Text('결제 금액'),
-                                  Text('총 $price 만원',
+                                  Text('총 ${day * onedayPrice} 원',
                                       style: TextStyle(
                                         fontSize: 18.0, // 폰트 크기를 24로 설정
                                       ))
