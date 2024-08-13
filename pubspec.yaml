@@ -130,7 +130,8 @@ flutter:
     - assets/sale3.png
     - assets/sale4.png
     - assets/align-justify.png
-
+    - assets/pencil.png
+    - assets/drop.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

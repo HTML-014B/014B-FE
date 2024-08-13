@@ -4,6 +4,9 @@ import 'package:flutter/widgets.dart';
 import 'package:html_front/components/crop_item.dart';
 import 'package:html_front/components/custom_appbar.dart';
 import 'package:html_front/models/crop_model.dart';
+import 'package:html_front/screens/manageMyCrops_screen.dart';
+import 'package:html_front/screens/managePlants_screen.dart';
+import 'package:html_front/screens/registerMyCrops_screen.dart';
 
 class DiaryScreen extends StatefulWidget {
   @override
@@ -127,7 +130,12 @@ class _DiaryScreenState extends State<DiaryScreen> {
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Color(0xffDFF797),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () => {
+                                        Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    RegisterMyCropsScreen()))
+                                      },
                                   child: Text('식물 등록하기'))),
                           SizedBox(width: 10),
                           SizedBox(
@@ -135,7 +143,13 @@ class _DiaryScreenState extends State<DiaryScreen> {
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Color(0xffDFF797),
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              ManageMyCropsScreen()),
+                                    );
+                                  },
                                   child: Text('식물 관리하기')))
                         ],
                       )
