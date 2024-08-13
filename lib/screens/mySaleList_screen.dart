@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class MySaleListScreen extends StatelessWidget {
   String user = '공일오비';
-  String total_price = '12000';
+  String total_price = '9900';
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +28,8 @@ class MySaleListScreen extends StatelessWidget {
               )),
           new Divider(color: Color(0xffD9D9D9), thickness: 3),
           new ListTile(
-            title: new Text('맛있는 햇감자 1kg $total_price원'),
-            leading: Image.asset('assets/potato.png'),
+            title: new Text('튼튼하고 가벼운 고급 삽 $total_price원'),
+            leading: Image.asset('assets/shovel.jpg'),
             onTap: () {},
           ),
           new Divider(),

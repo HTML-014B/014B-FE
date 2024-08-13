@@ -137,6 +137,7 @@ flutter:
     - assets/crop2.png
     - assets/crop3.png
     - assets/crop4.png
+    - assets/shovel.jpg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
