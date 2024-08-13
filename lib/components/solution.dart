@@ -23,7 +23,7 @@ class Solution extends StatelessWidget {
       SizedBox(height: 20),
       Expanded(
           child: Container(
-        padding: const EdgeInsets.all(5),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(color: Color(0xffF7ECB4).withOpacity(0.24)),
         child: SingleChildScrollView(
             child: Text(
